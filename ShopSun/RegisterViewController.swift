@@ -43,7 +43,7 @@ class RegisterViewController: UIViewController {
         let user = userTextField.text!
         let password = passwordTextField.text!
         
-        print("name ==>> \(name)") 
+        print("name ==>> \(name)")
         print("user ==>> \(user)")
         print("password ==>> \(password)")
         
@@ -80,6 +80,7 @@ class RegisterViewController: UIViewController {
                     
                     let myResult = canReadData
                     if myResult == "true" {
+                        
                         
                         DispatchQueue.main.async /* ทำให้ performSegue ทำงานใน task ได้*/{
                         self.performSegue(withIdentifier: "BackToAuthen", sender: nil)
