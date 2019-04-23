@@ -60,6 +60,7 @@ class RegisterViewController: UIViewController {
         
     }
     
+    
     func uploadDataToServer(name:String,user:String,password:String) -> Void {
       
         let urlString = "https://www.androidthai.in.th/ssm/addDataSun.php?isAdd=true&Name=\(name)&User=\(user)&Password=\(password)"
