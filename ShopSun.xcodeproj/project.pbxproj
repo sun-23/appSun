@@ -12,6 +12,7 @@
 		A4801601226EC5800027A6C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48015FF226EC5800027A6C6 /* Main.storyboard */; };
 		A4801603226EC5810027A6C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4801602226EC5810027A6C6 /* Assets.xcassets */; };
 		A4801606226EC5810027A6C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4801604226EC5810027A6C6 /* LaunchScreen.storyboard */; };
+		A480160E226ECEA30027A6C6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A480160D226ECEA30027A6C6 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A4801602226EC5810027A6C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4801605226EC5810027A6C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4801607226EC5810027A6C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A480160D226ECEA30027A6C6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				A48015FB226EC5800027A6C6 /* AppDelegate.swift */,
 				A48015FD226EC5800027A6C6 /* ViewController.swift */,
 				A48015FF226EC5800027A6C6 /* Main.storyboard */,
+				A480160D226ECEA30027A6C6 /* RegisterViewController.swift */,
 				A4801602226EC5810027A6C6 /* Assets.xcassets */,
 				A4801604226EC5810027A6C6 /* LaunchScreen.storyboard */,
 				A4801607226EC5810027A6C6 /* Info.plist */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A480160E226ECEA30027A6C6 /* RegisterViewController.swift in Sources */,
 				A48015FE226EC5800027A6C6 /* ViewController.swift in Sources */,
 				A48015FC226EC5800027A6C6 /* AppDelegate.swift in Sources */,
 			);
