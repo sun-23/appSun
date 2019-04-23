@@ -43,7 +43,7 @@ class RegisterViewController: UIViewController {
         let user = userTextField.text!
         let password = passwordTextField.text!
         
-        print("name ==>> \(name)")
+        print("name ==>> \(name)") 
         print("user ==>> \(user)")
         print("password ==>> \(password)")
         
