@@ -111,6 +111,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="BXc-qx-k3o" id="RfT-Ao-BD2"/>
                         <outlet property="userTextField" destination="Ne8-Hz-Mwz" id="QAh-8h-Yh2"/>
+                        <segue destination="vXS-Hk-FGO" kind="show" identifier="GoToRegister" id="n70-qt-4rH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -129,8 +130,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Register" id="itT-53-vTG">
-                                        <barButtonItem key="leftBarButtonItem" title="BackToAuthen" image="back" id="Abi-yb-gjy"/>
-                                        <barButtonItem key="rightBarButtonItem" title="UpLoad" image="cloudUpload" id="whM-iA-4nh"/>
+                                        <barButtonItem key="leftBarButtonItem" title="BackToAuthen" image="back" id="Abi-yb-gjy">
+                                            <connections>
+                                                <action selector="backToAuthen:" destination="vXS-Hk-FGO" id="bPB-mB-qTe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="UpLoad" image="cloudUpload" id="whM-iA-4nh">
+                                            <connections>
+                                                <action selector="uploadButton:" destination="vXS-Hk-FGO" id="N26-uj-GcA"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -179,6 +188,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dpt-fW-mG5"/>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="9Kl-Ep-7Wo" id="UEj-c1-54G"/>
+                        <outlet property="passwordTextField" destination="mIu-O1-gP4" id="iYz-hP-iLb"/>
+                        <outlet property="userTextField" destination="vRp-p5-omM" id="nfk-Ny-1VY"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="BackToAuthen" id="aUV-fn-xHK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45S-6x-MaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     
     @IBAction func registerButton(_ sender: UIButton) {
         print("You Click Register")
+        performSegue(withIdentifier: "GoToRegister", sender: nil)
     }
     
 
