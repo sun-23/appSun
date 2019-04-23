@@ -48,8 +48,10 @@ class RegisterViewController: UIViewController {
         print("password ==>> \(password)")
         
         if((name.count == 0) || (user.count == 0) || (password.count == 0)){
+            
             print("Have Space")
             myAlert(titleString: "Have Space", messageString: "กรุณาใส่ข้อความให้ครบ")
+            
         }else{
             print("No Space")
             uploadDataToServer(name: name, user: user, password: password)
