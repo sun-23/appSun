@@ -52,9 +52,55 @@ class RegisterViewController: UIViewController {
             myAlert(titleString: "Have Space", messageString: "กรุณาใส่ข้อความให้ครบ")
         }else{
             print("No Space")
+            uploadDataToServer(name: name, user: user, password: password)
+            
         }
         
     }
+    
+    func uploadDataToServer(name:String,user:String,password:String) -> Void {
+      
+        let urlString = "https://www.androidthai.in.th/ssm/addDataSun.php?isAdd=true&Name=\(name)&User=\(user)&Password=\(password)"
+        
+        let url = URL(string: urlString)
+        let request = NSMutableURLRequest(url: url!)
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {data,response,error in
+            if error != nil /* check error ว่าส่งได้ไหม */{
+                print("Have Error")
+            } else {
+                
+                if let testReadAble = data /* ถ้ากำหนดค่าใน testReadAble ได้ก็จะทำงานใน if */{
+                    
+                    let canReadData = NSString(data: testReadAble, encoding: String.Encoding.utf8.rawValue) //ถอยรหัสออกมาจากtestReadAble
+                    
+                    print("canReadData ==>> \(String(describing: canReadData))")
+                    
+                    let myResult = canReadData
+                    if myResult == "true" {
+                        
+                        DispatchQueue.main.async /* ทำให้ performSegue ทำงานใน task ได้*/{
+                        self.performSegue(withIdentifier: "BackToAuthen", sender: nil)
+                        }
+                        
+                    }
+                    
+                    
+                }else{
+                    
+                    print("Cannot Read Able")
+                    
+                }//if 2
+                
+            }// if 1
+        } // End Task
+        task.resume()
+        
+        
+        
+        
+        
+    }// uploadData
     
 
     func myAlert(titleString:String,messageString:String) -> Void {
